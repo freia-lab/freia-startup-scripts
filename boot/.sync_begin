@@ -1,0 +1,5 @@
+/export/startup/boot/icsb-vmeifc1210-066/load_pev.sh
+/export/startup/boot/.sync_begin
+/export/startup/boot/.sync_end
+/export/startup/boot/icsb-mtcacpu-ct027/test.sh
+/export/startup/boot/icsb-vmeifc1210-057/loadmodules.sh
