@@ -15,5 +15,5 @@
 #require sis8300llrf,3.1.5
 require sis8300llrf
 #require ioc-sis8300llrf-freia,konrad
-require ioc-sis8300llrf-freia,konrad
+require ioc-sis8300llrf-freia
 requireSnippet(sis8300llrf-freia.cmd, "SIS8300LLRF_SLOT=4")
