@@ -1,0 +1,13 @@
+UAG(Freia)	   {konrgaje,konrad} 
+#HAG(CompCtrl) {192.168.68.156} 
+ 
+ASG(DEFAULT) { 
+   RULE(1,READ) 
+} 
+ 
+ASG(Freia) { 
+   RULE(1,READ) 
+   RULE(1,WRITE){ 
+	UAG(Freia) 
+   } 
+} 
