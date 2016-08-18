@@ -1,4 +1,5 @@
 #!/bin/bash
+host=`hostname`
 echo "Stopping LDAP client daemon"
 systemctl stop nslcd
 nmcli device show >/tmp/network_devices
@@ -10,3 +11,5 @@ echo "Setting up CAGWPUB connection"
 nmcli connection up CAGWPUB
 #ip route add default via 192.168.10.1 dev eno1
 touch /tmp/nuc-02
+echo "Setting up firewall rules"
+iptables-restore </opt/startup/boot/$host/iptables.rules

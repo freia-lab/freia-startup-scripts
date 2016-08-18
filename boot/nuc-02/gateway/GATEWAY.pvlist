@@ -5,5 +5,7 @@ CstatH.*	 	ALLOW
 Cryo.*			ALLOW  
 LLRF.* 			ALLOW 
 HPRF.* 			ALLOW 
+RadProt.*		ALLOW
+WtrC.*			ALLOW
  
 LLRF-TR:TL2-WIDTH	ALLOW	Freia 
