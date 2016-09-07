@@ -7,5 +7,9 @@ LLRF.* 			ALLOW
 HPRF.* 			ALLOW 
 RadProt.*		ALLOW
 WtrC.*			ALLOW
- 
+Env.*			ALLOW 
+PLC.*			ALLOW
+TPG300.*		ALLOW
+IntlkF.*		ALLOW
+
 LLRF-TR:TL2-WIDTH	ALLOW	Freia 
