@@ -1,6 +1,6 @@
 EVALUATION ORDER ALLOW, DENY 
  
-gateway:.*		ALLOW 
+GW-nuc-02:.*		ALLOW 
 CstatH.*	 	ALLOW  
 Cryo.*			ALLOW  
 LLRF.* 			ALLOW 
@@ -11,5 +11,6 @@ Env.*			ALLOW
 PLC.*			ALLOW
 TPG300.*		ALLOW
 IntlkF.*		ALLOW
+Ctrl.*			ALLOW
 
 LLRF-TR:TL2-WIDTH	ALLOW	Freia 
