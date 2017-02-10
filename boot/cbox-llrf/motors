@@ -1,9 +1,10 @@
 #!/bin/bash
 echo "Configuring network interface for the motor controller"
 echo "IP_ADDR=192.6.94.1"
-ip addr add 192.6.94.1/24 dev enp20s0
+nmcli connection add type ethernet con-name GEOBRICK ifname enp20s0 ip4 192.6.194.1/24
+nmcli connection up GEOBRICK
 
 echo "Stopping client LDAP service"
 systemctl stop nslcd
 
-touch /tmp/niklas
+touch /tmp/konrad

@@ -12,7 +12,7 @@
 #require ioc-sis8300llrf-freia,0.1.1
 #requireSnippet(sis8300llrf-demo-start.cmd, "SIS8300LLRF_SLOT=4")
 
-#require sis8300llrf,3.1.5
+#require sis8300llrf,3.2.0
 require sis8300llrf
 #require ioc-sis8300llrf-freia,konrad
 require ioc-sis8300llrf-freia
