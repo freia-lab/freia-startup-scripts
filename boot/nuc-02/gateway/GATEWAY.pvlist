@@ -13,5 +13,6 @@ TPG300.*		ALLOW
 IntlkF.*		ALLOW
 Ctrl.*			ALLOW
 FREIA.*			ALLOW
+Cav1.*			ALLOW
 
 LLRF-TR:TL2-WIDTH	ALLOW	Freia 
