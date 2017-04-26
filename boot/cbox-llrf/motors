@@ -7,4 +7,7 @@ nmcli connection up GEOBRICK
 echo "Stopping client LDAP service"
 systemctl stop nslcd
 
+echo "Adding the default route"
+ip route add default via 192.168.10.1
+
 touch /tmp/konrad
