@@ -8,3 +8,4 @@ ENVIRONMENT_VERSION=2.0.0
 TZ='Europe/Stockholm'
 # Specific configuration
 PROCSERV_PORT=2008
+EPICS_CAS_INTF_ADDR_LIST="192.168.10.115"
