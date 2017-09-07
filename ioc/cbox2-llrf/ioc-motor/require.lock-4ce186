@@ -1,0 +1,9 @@
+cavitytuner,0.2.3
+seq,2.1.10
+asyn,4.31.0
+calc,3.6.1
+pcre,8.36.0
+streamdevice,2.7.7
+motor,6.10.0-ESS0
+tpmac,3.11.2-ESS0
+singlemotion,1.4.9
