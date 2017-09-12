@@ -1,6 +1,8 @@
+require autosave,5.7+
 #require rfleakdet-freia,konrad
-require rfleakdet-freia,1.0+
+require rfleakdet-freia,1.1+
 epicsEnvSet("RFLEAK_PORT", "RFLEAKDET")
+epicsEnvSet("AUTOSAVE_SYSM_PV_PREFIX","frleakdet:")
 
 drvAsynIPPortConfigure(${RFLEAK_PORT}, "192.168.10.9:4002",0,0,0)
 #drvAsynIPPortConfigure("PORT", "192.168.10.9:4004",0,0,0)
@@ -12,3 +14,9 @@ dbLoadRecords("rfleakdet.db","RFDET_PORT='${RFLEAK_PORT}',PREFIX='Env-RFleakage'
 dbLoadRecords("rfleakdet.db","RFDET_PORT='${RFLEAK_PORT}',PREFIX='Env-RFleakage',NODE=1")
 dbLoadRecords("rfleakdet.db","RFDET_PORT='${RFLEAK_PORT}',PREFIX='Env-RFleakage',NODE=2")
 dbLoadRecords("rfleakdet.db","RFDET_PORT='${RFLEAK_PORT}',PREFIX='Env-RFleakage',NODE=3")
+
+requireSnippet(rfleakdet-freia-preSaveRestore.cmd)
+
+iocInit
+
+requireSnippet(rfleakdet-freia-postSaveRestore.cmd)
