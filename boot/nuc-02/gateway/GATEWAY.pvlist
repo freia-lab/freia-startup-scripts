@@ -3,6 +3,7 @@ EVALUATION ORDER ALLOW, DENY
 GW-nuc-02:.*		ALLOW 
 CstatH.*	 	ALLOW  
 CstatV.*	 	ALLOW  
+CM.*			ALLOW	Freia
 Cryo.*			ALLOW  
 LLRF.* 			ALLOW 
 HPRF.* 			ALLOW 

@@ -3,7 +3,7 @@
 export host=`hostname`
 host_ip=`host $host | awk '{print $4}'`
 
-gwhome=/var/tmp/gateway
+gwhome=/var/run/gateway
 uid=997
 gid=995
 
