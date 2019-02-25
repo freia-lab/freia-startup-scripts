@@ -16,6 +16,7 @@ IntlkF.*		ALLOW
 Ctrl.*			ALLOW
 FREIA.*			ALLOW
 Cav1.*			ALLOW
+Cav2.*			ALLOW
 TS1-010RFC.*		ALLOW
 
 LLRF-TR:TL2-WIDTH	ALLOW	Freia 
