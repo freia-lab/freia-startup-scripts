@@ -1,4 +1,5 @@
 UAG(Freia)	   {konrgaje,konrad} 
+UAG(Kevin)	   {kevpe345}
 #HAG(CompCtrl) {192.168.68.156} 
  
 ASG(DEFAULT) { 
@@ -9,5 +10,11 @@ ASG(Freia) {
    RULE(1,READ) 
    RULE(1,WRITE){ 
 	UAG(Freia) 
+   } 
+} 
+ASG(Kevin) { 
+   RULE(1,READ) 
+   RULE(1,WRITE){ 
+	UAG(Kevin) 
    } 
 } 
