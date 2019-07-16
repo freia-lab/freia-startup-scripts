@@ -1,0 +1,1 @@
+01 * * * * /home/root/diskPercent.sh Ctrl-nuc02:disk-var:dskPercent
