@@ -1,5 +1,6 @@
 #require autosave,5.7+
-require simple-pid-freia,konrad
+#require simple-pid-freia,konrad
+require simple-pid-freia,0.1+
 #epicsEnvSet("AUTOSAVE_SYSM_PV_PREFIX","simple-pid:")
 
 
