@@ -1,7 +1,7 @@
 #!/bin/bash
 host=`hostname`
-#echo "Stopping LDAP client daemon"
-#systemctl stop nslcd
+echo "Stopping LDAP client daemon"
+systemctl stop nslcd
 nmcli device show >/tmp/network_devices
 hostname >/tmp/hostname
 #echo "Adding ESYS connection"
