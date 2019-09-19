@@ -3,4 +3,4 @@ seq,2.1.10
 calc,3.6.1
 pcre,8.36.0
 streamdevice,2.7.11-ESS1
-fgcepics,konrad
+fgcepics,0.6.0
