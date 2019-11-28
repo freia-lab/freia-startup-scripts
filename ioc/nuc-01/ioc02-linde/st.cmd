@@ -11,7 +11,7 @@ dbpf Cryo-Dwr:LHe:LI5200_Lt.HYST 5
 dbpf Cryo-Cmp:HP:PI2170.LLSV "MAJOR"
 dbpf Cryo-Cmp:HP:PI2170.LOLO 4.5
 dbpf Cryo-Cmp:HP:PI2170.LSV "MINOR"
-dbpf Cryo-Cmp:HP:PI2170.LOW 5.25
+dbpf Cryo-Cmp:HP:PI2170.LOW 5.0
 dbpf Cryo-Cmp:HP:PI2170.HYST 0.3
 
 # LN2 nytt
