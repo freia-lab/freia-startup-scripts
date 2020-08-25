@@ -1,5 +1,5 @@
 #require ioc-linde-freia,konrad
-require ioc-linde-freia,1.2+
+require ioc-linde-freia,1.3+
 requireSnippet(linde-freia.cmd, "PLC_IPADDR=192.168.1.10")
 
 # Dewar level
