@@ -1,6 +1,6 @@
 require autosave,5.7+
 #require rfleakdet-freia,konrad
-require rfleakdet-freia,1.2+
+require rfleakdet-freia,1.3+
 epicsEnvSet("RFLEAK_PORT", "RFLEAKDET")
 epicsEnvSet("AUTOSAVE_SYSM_PV_PREFIX","frleakdet:")
 
