@@ -30,6 +30,9 @@
 # Allow CA (Epics) from UU VPN (130.238.188.1-130.238.191.255)
 -A INPUT -i enp0s20u3 -s 130.238.188.0/22 -p tcp --dport 5064 -j ACCEPT
 -A INPUT -i enp0s20u3 -s 130.238.188.0/22 -p udp --dport 5064 -j ACCEPT
+# Allow CA (Epics) from freia-rds.physics.uu.se
+-A INPUT -i enp0s20u3 -s 172.31.5.91 -p tcp --dport 5064 -j ACCEPT
+-A INPUT -i enp0s20u3 -s 172.31.5.91 -p udp --dport 5064 -j ACCEPT
 # Drop packets from Logitech device sending broadcasts all the time
 -A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 54915 -j DROP
 -A INPUT -i enp0s20u3 -j LOG --log-prefix "====WARNING=== INPUT on enp0s20u3 REJECTED: "

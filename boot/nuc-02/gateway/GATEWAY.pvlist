@@ -5,6 +5,7 @@ CstatH.*	 	ALLOW
 CstatV.*	 	ALLOW  
 CM.*			ALLOW	Freia
 Cryo.*			ALLOW  
+CoW.*			ALLOW	Konrad
 LLRF.* 			ALLOW 
 HPRF.* 			ALLOW 
 RadProt.*		ALLOW
