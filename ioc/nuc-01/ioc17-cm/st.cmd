@@ -1,6 +1,6 @@
 #require autosave,5.7+
-#require ioc_cm_freia,konrad
-require ioc_cm_freia,0.23+
+require ioc_cm_freia,konrad
+#require ioc_cm_freia,0.34+
 
 requireSnippet(cm-freia.cmd, "PLC_IPADDR=192.168.1.11, KEITH_IPADDR=192.168.1.12:5025")
 
