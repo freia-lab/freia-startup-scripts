@@ -1,5 +1,7 @@
 #require stream,2.8.10
-require dpu3,1.0.0
+require dpu3,1.0.1
+
+require autosave,5.10.2
  
 #Specify the TCP endpoint and give your 'bus' an arbitrary name eg. "asynstream1".
 drvAsynIPPortConfigure("PORT1","192.168.20.102:5000",0,0,0)
@@ -21,6 +23,13 @@ dbLoadRecords("dpu3.db", "PORT=PORT1,P=RadProt-Bunker2:")
 asynSetTraceIOMask "PORT1",0,4   # Enable traceIOHex
 #asynSetTraceMask "PORT1",0,0x1f     # Enable traceError and traceIODriver
 #asynSetTraceMask "PORT1",0,0xfff     # Enable traceError and traceIODriver
+
+epicsEnvSet("TOP", "/opt/epics/autosave")
+epicsEnvSet("IOCNAME", "RadProt-Bunker2")
+epicsEnvSet("IOCDIR", "radmon-nessa")
+
+iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=$(TOP),IOCNAME=$(IOCNAME)")
+
 
 iocInit()
 
