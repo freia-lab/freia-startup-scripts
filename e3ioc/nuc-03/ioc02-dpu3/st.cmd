@@ -1,5 +1,5 @@
 #require stream,2.8.10
-require dpu3,1.0.1
+require dpu3,1.0.2
 
 require autosave,5.10.2
  
