@@ -1,4 +1,4 @@
-require dpu3,1.1.0
+require dpu3,1.1.1
 
 epicsEnvSet ("IOCNAME", "ioc02-dpu3")
 epicsEnvSet("TOP", "/opt/epics/autosave")
