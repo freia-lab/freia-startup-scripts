@@ -54,6 +54,18 @@ iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=130.238.200.135,P=Ctrl-frei
 # HOST_14 (vsr01.freia.local)
 iocshLoad("$(superv_DIR)/computer-1p.iocsh","IP_ADDR=192.168.10.102,P=Ctrl-vsrv01,PART1=disk-root")
 
+# HOST_15 (freia-srv2)
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.61,P=Ctrl-freiaSrv2,PART1=disk-root,CH1=6,PART2=disk-boot,CH2=34,PART3=disk-boot_efi,CH3=36")
+
+# HOST_15 (freia-arcapl2.physics.uu.se)
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=130.238.200.143,P=Ctrl-arcApl2,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
+
+# HOST_16 (phoebus-srv)
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.90,P=Ctrl-phoebusSrv,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
+
+# HOST_17 (oldpc-04)
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.207,P=Ctrl-oldpc04,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
+
 iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=/opt/epics/autosave,IOCNAME=$(IOCNAME)")
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=$(IOCNAME)")
 
