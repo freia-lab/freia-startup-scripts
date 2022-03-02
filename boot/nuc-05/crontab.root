@@ -1,0 +1,2 @@
+01 * * * * /home/root/diskPercent.sh Ctrl-nuc05:disk-var:dskPercent
+05 3 * * * /home/root/rotateLogs.sh

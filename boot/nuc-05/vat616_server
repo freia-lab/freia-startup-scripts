@@ -1,0 +1,4 @@
+. /opt/epics/py-hidapi/bin/activate
+echo starting the server
+python  /opt/epics/py-hidapi/vat616_server.py
+
