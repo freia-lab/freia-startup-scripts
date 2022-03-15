@@ -1,4 +1,4 @@
-require hevol,0.4.0
+require hevol,0.4.1
 require recsync
 
 epicsEnvSet ("IOCNAME", "ioc18-hevol")
