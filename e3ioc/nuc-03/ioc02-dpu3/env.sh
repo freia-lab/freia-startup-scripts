@@ -17,6 +17,7 @@ E3_SITEAPPS_PATH=/epics/base-7.0.5/require/3.4.1/siteApps
 E3_SITEMODS_PATH=/epics/base-7.0.5/require/3.4.1/siteMods
 E3_REQUIRE_DB=/epics/base-7.0.5/require/3.4.1/db
 E3_REQUIRE_DBD=/epics/base-7.0.5/require/3.4.1/dbd
+E3_IOCSH=iocsh.bash
 
 # Specific configuration
 PROCSERV_PORT=3002
