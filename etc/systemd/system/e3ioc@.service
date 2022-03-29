@@ -1,0 +1,21 @@
+[Unit]
+Description=IOC: %I
+After=rc-local.service
+
+[Service]
+User=ioc
+# Only execute IOC if st.cmd exists
+AssertPathExists=/opt/startup/e3ioc/%H/%i/st.cmd
+# Execute pre with root
+PermissionsStartOnly=true
+ExecStartPre=/bin/mkdir -p /var/log/procServ
+ExecStartPre=/bin/chown -R ioc:ioc /var/log/procServ
+ExecStartPre=/bin/mkdir -p /var/run/procServ/%i
+#ExecStartPre=/bin/find /opt/startup/e3ioc/%H/%i -name 'require.lock-*' -exec cp {} /var/run/procServ/%i \;
+ExecStartPre=/bin/chown -R ioc:ioc /var/run/procServ/%i
+# Run procServ with user ioc
+EnvironmentFile=/opt/startup/e3ioc/%H/%i/env.sh
+ExecStart=/usr/bin/procServ --allow -f -p /var/run/procServ/%i/procServ.pid -L /var/log/procServ/out-%i -i ^C^D -c /var/run/procServ/%i ${PROCSERV_PORT} ${E3_REQUIRE_BIN}/iocsh.bash /opt/startup/e3ioc/%H/%i/st.cmd --name=%i
+
+[Install]
+WantedBy=multi-user.target

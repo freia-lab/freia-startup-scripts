@@ -1,0 +1,21 @@
+[Unit]
+Description=IOC: %I
+After=rc-local.service
+
+[Service]
+User=ioc
+# Only execute IOC if st.cmd exists
+AssertPathExists=/opt/startup/ioc/%H/%i/st.cmd
+# Execute pre with root
+PermissionsStartOnly=true
+ExecStartPre=/bin/mkdir -p /var/log/procServ
+ExecStartPre=/bin/chown -R ioc:ioc /var/log/procServ
+ExecStartPre=/bin/mkdir -p /var/run/procServ/%i
+ExecStartPre=/bin/find /opt/startup/ioc/%H/%i -name 'require.lock-*' -exec cp {} /var/run/procServ/%i \;
+ExecStartPre=/bin/chown -R ioc:ioc /var/run/procServ/%i
+# Run procServ with user ioc
+EnvironmentFile=/opt/startup/ioc/%H/%i/env.sh
+ExecStart=/usr/bin/procServ --allow -f -p /var/run/procServ/%i/procServ.pid -L /var/log/procServ/out-%i -i ^C^D -c /var/run/procServ/%i ${PROCSERV_PORT} ${EPICS_MODULES_PATH}/environment/${ENVIRONMENT_VERSION}/${BASE}/bin/${EPICS_HOST_ARCH}/iocsh /opt/startup/ioc/%H/%i/st.cmd -n %i
+
+[Install]
+WantedBy=multi-user.target
