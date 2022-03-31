@@ -20,5 +20,6 @@ E3_REQUIRE_DBD=/epics/base-7.0.5/require/3.4.1/dbd
 E3_IOCSH=iocsh.bash
 
 # Specific configuration
+IOCNAME=ioc03-smb100
 PROCSERV_PORT=3003
 EPICS_CAS_INTF_ADDR_LIST="192.168.10.117"
