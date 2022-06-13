@@ -7,7 +7,7 @@ TZ='Europe/Stockholm'
 
 # E3 configuration
 E3_REQUIRE_NAME=require
-E3_REQUIRE_INC=/epics/base-7.0.5/require/3.4.1/include
+E3_REQUIRE_INC=/epics/base-7.0.6.1/require/4.0.0/include
 E3_REQUIRE_VERSION=4.0.0
 E3_REQUIRE_LOCATION=/epics/base-7.0.6.1/require/4.0.0
 E3_REQUIRE_LIB=/epics/base-7.0.6.1/require/4.0.0/lib
