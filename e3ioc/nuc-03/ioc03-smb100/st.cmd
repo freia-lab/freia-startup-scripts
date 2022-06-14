@@ -1,5 +1,10 @@
 require smb100a,1.1.0
+require iocstats
  
+# iocStats database
+
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+
 #Specify the TCP endpoint and give your 'bus' an arbitrary name eg. "asynstream1".
 drvAsynIPPortConfigure("PORT1","192.168.1.181:5025",0,0,0)
 drvAsynIPPortConfigure("PORT2","192.168.1.182:5025",0,0,0)

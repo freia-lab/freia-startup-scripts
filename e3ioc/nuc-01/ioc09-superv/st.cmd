@@ -6,6 +6,11 @@ epicsEnvSet ("IOCDIR", "superv")
 require superv
 require autosave
 require recsync
+require iocstats
+
+# iocStats database
+
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
 
 iocshLoad("$(superv_DIR)/superv-common.iocsh")
 
