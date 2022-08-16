@@ -1,4 +1,4 @@
-require dpu3,1.1.1
+require dpu3
 require iocstats
 
 epicsEnvSet ("IOCNAME", "ioc02-dpu3")
