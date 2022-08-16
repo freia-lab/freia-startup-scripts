@@ -20,6 +20,7 @@ ip route add default via 192.168.10.1 dev eno1 tab 1
 ip rule add from 192.168.10.117/32 tab 1 priority 100
 ip rule add from 192.168.1.117/32 tab 2 priority 200
 
+nmcli connection modify NESSA +ipv4.routes "192.168.20.0/24 192.168.21.1"
 ip route add 192.168.20.0/24 via 192.168.21.1 dev enp0s20u4
 
 ip route flush cache
