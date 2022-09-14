@@ -11,7 +11,7 @@ epicsEnvSet ("IOCNAME", "ioc02-pnan5221")
 # This is for scanning motor 2 (resonance frequency read from trace 3 of the spectrum vector analuzer)
 #dbLoadRecords("$(pnan5221_DB)mtr-scan.template", "P=LLRF:,N=2,MRKR=3")
 
-iocshLoad(${pnan5221_DIR}/pnan5221.iocsh, "IOCNAME = ioc02-pnan5221, IP_ADDR = 192.168.10.33")
+iocshLoad(${pnan5221_DIR}/pnan5221.iocsh, "IOCNAME = ioc02-pnan5221, IP = 192.168.10.33")
 
 # iocStats database
 
