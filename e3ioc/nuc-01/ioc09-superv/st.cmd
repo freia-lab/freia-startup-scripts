@@ -60,7 +60,7 @@ iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=130.238.200.135,P=Ctrl-frei
 iocshLoad("$(superv_DIR)/computer-1p.iocsh","IP_ADDR=192.168.10.102,P=Ctrl-vsrv01,PART1=disk-root")
 
 # HOST_15 (freia-srv2)
-iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.61,P=Ctrl-freiaSrv2,PART1=disk-root,CH1=6,PART2=disk-boot,CH2=34,PART3=disk-boot_efi,CH3=36")
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.61,P=Ctrl-freiaSrv2,PART1=disk-root,CH1=6,PART2=disk-boot,CH2=34,PART3=disk-boot_efi,CH3=35")
 
 # HOST_15 (freia-arcapl2.physics.uu.se)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=130.238.200.143,P=Ctrl-arcApl2,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
