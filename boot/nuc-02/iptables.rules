@@ -35,6 +35,10 @@
 -A INPUT -i enp0s20u3 -s 172.31.5.91 -p udp --dport 5064 -j ACCEPT
 # Drop packets from Logitech device sending broadcasts all the time
 -A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 54915 -j DROP
--A INPUT -i enp0s20u3 -j LOG --log-prefix "====WARNING=== INPUT on enp0s20u3 REJECTED: "
+-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 520 -j DROP
+-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 1947 -j DROP
+# Drop all udp broadcast messages 
+-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp -d 130.238.200.255/25 -j DROP
+-A INPUT -i enp0s20u3 -j LOG --log-prefix "==WARNING== INPUT REJECTED: "
 -A INPUT -j REJECT --reject-with icmp-host-prohibited
 COMMIT
