@@ -17,6 +17,7 @@ dbLoadRecords '$(superv_DB)totOpTime.db','P=CstatH-2Kpumps:P3A,sOn=sOn'
 dbLoadRecords '$(superv_DB)totOpTime.db','P=CstatH-2Kpumps:P1A,sOn=sOn'
 dbLoadRecords '$(superv_DB)totOpTime.db','P=CstatH-2Kpumps:P1B,sOn=sOn'
 dbLoadRecords '$(superv_DB)totOpTime.db','P=CstatH-2Kpumps:P2,sOn=sOn'
+dbLoadRecords '$(superv_DB)totOpTime.db','P=Llab-Laser,sON=sOn'
 
 # For service data
 
