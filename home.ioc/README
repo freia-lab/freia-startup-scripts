@@ -1,0 +1,5 @@
+Copy the .local directory from here to /export/nfsroots/centos7/rootfs/home/ioc/
+Change the ownership of all the files to 997:995 (chown -R 997:995 .local)
+
+
+

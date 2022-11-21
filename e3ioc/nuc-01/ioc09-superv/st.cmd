@@ -1,3 +1,5 @@
+epicsEnvSet ("PYTHONDONTWRITEBYTECODE" , "1")
+
 epicsEnvSet ("IOCNAME", "ioc09-superv")
 
 # Directory name for the autosave files
@@ -70,6 +72,10 @@ iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.90,P=Ctrl-phoebu
 
 # HOST_17 (oldpc-04)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.207,P=Ctrl-oldpc04,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
+
+# Tomcat monitoring
+iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia-dbwr.physics.uu.se:8080,P=Ctrl-freiaDbwr:tomcat-,PDEV=dbwr")
+iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia.physics.uu.se:8080,P=Ctrl-freia:tomcat-,PDEV=freia")
 
 iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=/opt/epics/autosave,IOCNAME=$(IOCNAME)")
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=$(IOCNAME)")
