@@ -73,6 +73,10 @@ dbLoadRecords '$(superv_DB)service-common.db', 'P=WtrC-Dwtr:P1,S2="",S3="",S=A'
 dbLoadRecords '$(superv_DB)service.db','P=WtrC-Dwtr:P2,N=1'
 dbLoadRecords '$(superv_DB)service-common.db', 'P=WtrC-Dwtr:P2,S2="",S3="",S=A'
 
+# Password token for alarm-config-logger GitHub repository
+#
+dbLoadRecords '$(superv_DB)service.db','P=Ctrl-Alarm:PasswToken,OPTIME=0'
+
 # Autosave
 
 iocshLoad("$(autosave_DIR)autosave.iocsh", "AS_TOP=/opt/epics/autosave,IOCNAME=$(IOCNAME)")
