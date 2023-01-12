@@ -1,4 +1,4 @@
-require hevol,0.4.1
+require hevol
 require recsync
 require iocstats
 
