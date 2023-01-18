@@ -41,6 +41,7 @@ iocshLoad(${tpg300_DIR}/vac_ctrl_tpg300_500_moxa.iocsh, "DEVICENAME = TPG300-4, 
 iocshLoad(${tpg300_DIR}/vac_ctrl_tpg300_500_moxa.iocsh, "DEVICENAME = TPG300-5, IPADDR = 192.168.10.9, PORT = 4013")
 iocshLoad(${tpg300_DIR}/vac_ctrl_tpg300_500_moxa.iocsh, "DEVICENAME = TPG300-7, IPADDR = 192.168.10.7, PORT = 4016")
 iocshLoad(${tpg300_DIR}/vac_ctrl_tpg300_500_moxa.iocsh, "DEVICENAME = TPG300-8, IPADDR = 192.168.10.7, PORT = 4015")
+iocshLoad(${tpg300_DIR}/vac_ctrl_tpg300_500_moxa.iocsh, "DEVICENAME = TPG300-9, IPADDR = 192.168.10.7, PORT = 4014")
 
 dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='TPG300-1',ADDR='0',IMAX='1024',OMAX='256'")
 
@@ -94,6 +95,14 @@ iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME =
 iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME = CstatV-Vac:PT047, CHANNEL = A2, SOURCE = B,  CONTROLLERNAME = TPG300-8, BOARD = PE, GAUGE = TPR18, RELAY1_SOURCE = C, RELAY1 = 3")
 iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME = CstatV-Vac:PT046, CHANNEL = B1, SOURCE = C,  CONTROLLERNAME = TPG300-8, BOARD = PI, GAUGE = TPR18, RELAY1_SOURCE = B, RELAY1 = 2")
 iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME = CstatV-Vac:PT045, CHANNEL = B2, SOURCE = D,  CONTROLLERNAME = TPG300-8, BOARD = PI, GAUGE = TPR18, RELAY1_SOURCE = D, RELAY1 = 4")
+
+# TPG300-9 configuration: Sensor A1 Relay1, Sensor B1 Relay2, Sensor A2 relay3, Sensor B2 Relay4
+
+iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME = CstatV-Vac:PT052, CHANNEL = A1, SOURCE = A,  CONTROLLERNAME = TPG300-9, BOARD = PI, GAUGE = TPR18, RELAY1_SOURCE = A, RELAY1 = 1")
+iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME = CstatV-Vac:PT053, CHANNEL = A2, SOURCE = B,  CONTROLLERNAME = TPG300-9, BOARD = PI, GAUGE = TPR18, RELAY1_SOURCE = C, RELAY1 = 3")
+iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME = CstatV-Vac:PT054, CHANNEL = B1, SOURCE = C,  CONTROLLERNAME = TPG300-9, BOARD = PE, GAUGE = IKR50, RELAY1_SOURCE = B, RELAY1 = 2")
+iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME = CstatV-Vac:PT055, CHANNEL = B2, SOURCE = D,  CONTROLLERNAME = TPG300-9, BOARD = PE, GAUGE = TPR18, RELAY1_SOURCE = D, RELAY1 = 4")
+
 
 # iocStats database
 
