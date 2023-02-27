@@ -12,6 +12,7 @@ epicsEnvSet ("IOCNAME", "ioc02-pnan5221")
 #dbLoadRecords("$(pnan5221_DB)mtr-scan.template", "P=LLRF:,N=2,MRKR=3")
 
 iocshLoad(${pnan5221_DIR}/pnan5221.iocsh, "IOCNAME = ioc02-pnan5221, IP = 192.168.10.33")
+iocshLoad("$(pnan5221_DIR)scan-mtr.iocsh")
 
 # iocStats database
 
