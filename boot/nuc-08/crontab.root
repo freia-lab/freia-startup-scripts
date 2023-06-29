@@ -1,2 +1,5 @@
 01 * * * * /home/root/diskPercent.sh Ctrl-nuc08:disk-var:dskPercent
 05 3 * * * /home/root/rotateLogs.sh
+0  0 1 * * /epics/base-7.0.7/bin/linux-x86_64/caput Env-Gas:MFM-FREIA:WriteEnable 43605; /epics/base-7.0.7/bin/linux-x86_64/caput Env-Gas:MFM-FREIA:AccFlow-Rst 1
+0  0 1 * * /epics/base-7.0.7/bin/linux-x86_64/caput Env-Gas:MFM-Hus3:WriteEnable 43605; /epics/base-7.0.7/bin/linux-x86_64/caput Env-Gas:MFM-Hus3:AccFlow-Rst 1
+
