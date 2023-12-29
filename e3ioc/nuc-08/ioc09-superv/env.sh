@@ -1,7 +1,7 @@
 # General configuration
 EPICS_BASE=/epics/base-7.0.7
 EPICS_DRIVER_PATH=/epics/base-7.0.7/require/5.0.0/siteMods
-EPICS_HOST_ARCH=linux-x86_64
+EPICS_HOST_ARCH=linux-x86_64-debug
 #EPICS_CA_ADDR_LIST=""
 TZ='Europe/Stockholm'
 EPICS_TZ='Europe/Stockholm'
