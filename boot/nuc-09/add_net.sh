@@ -1,21 +1,22 @@
 #!/bin/bash
+device=enx00249b6dcb8b
 host=`hostname`
-echo "Stopping LDAP client daemon"
-systemctl stop nslcd
-nmcli device show >/tmp/network_devices
+ip link  >/tmp/network_devices
 hostname >/tmp/hostname
-#echo "Adding LLAB connection"
-#nmcli connection add type ethernet con-name LLAB ifname enp0s21f0u3 ip4 10.1.11.31/16 
-#echo "Setting connection LLAB up"
-#nmcli connection up LLAB
+#ip link add $device type ethernet
+#Set address for dev $device
+echo "Setting address for $device"
+ip addr add 130.238.200.145/25 dev $device
+#ip link set $device up
+echo "Setting up symmetric routing"
+ip route add 192.168.10.0/24 dev eno1 tab 1
+ip route add 130.238.200.128/25 dev $device tab 2
+ip route add default via 130.238.200.129 dev $device tab 2
+ip route add default via 192.168.10.1 dev eno1 tab 1
+ip rule add from 192.168.10.129/32 tab 1 priority 100
+ip rule add from 130.238.200.145/32 tab 2 priority 200
+ip route flush cache
 
-#echo "Setting up symmetric routing"
-#ip route add 192.168.10.0/24 dev eno1 tab 1
-#ip route add 10.1.0.0/16 dev enp0s21f0u3 tab 2
-#ip route add default via 192.168.10.1 dev eno1 tab 1
-#ip rule add from 192.168.10.128/32 tab 1 priority 100
-#ip rule add from 10.1.11.31/32 tab 2 priority 200
-
-#ip route flush cache
-
-#ip route add default via 192.168.10.1 dev eno1
+touch /tmp/nuc-09
+echo "Setting up firewall rules"
+iptables-restore </opt/startup/boot/$host/iptables.rules

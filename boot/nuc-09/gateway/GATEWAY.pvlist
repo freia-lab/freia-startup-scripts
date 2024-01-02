@@ -1,0 +1,26 @@
+EVALUATION ORDER ALLOW, DENY 
+ 
+GW-nuc-02:.*		ALLOW 
+CstatH.*	 	ALLOW  
+CstatV.*	 	ALLOW  
+CM.*			ALLOW	Freia
+Cryo.*			ALLOW  
+CoW.*			ALLOW	Konrad
+LLRF.* 			ALLOW 
+HPRF.* 			ALLOW 
+RadProt.*		ALLOW
+WtrC.*			ALLOW
+Env.*			ALLOW 
+PLC.*			ALLOW
+TPG300.*		ALLOW
+IntlkF.*		ALLOW
+Ctrl.*			ALLOW
+FREIA.*			ALLOW
+Cav1.*			ALLOW
+Cav2.*			ALLOW
+TS1-010RFC.*		ALLOW
+ESSPMAC.*		ALLOW
+MAG.*			ALLOW	Kevin
+TR-LLRF.*		ALLOW
+ioc.*			ALLOW
+Llab.*			ALLOW
