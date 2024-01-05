@@ -12,18 +12,26 @@
 #-A INPUT -i enp0s20u3 -s 130.238.200.130 -p tcp --dport 22 -j ACCEPT
 #-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --sport 5064 -j LOG --log-prefix "INPUT: udp:s5064 "
 -A INPUT -i enx00249b6dcb8b -s 130.238.200.129/25 -p udp --sport 5064 -j ACCEPT
+-A INPUT -i enx00249b6dcb8b -s 130.238.200.129/25 -p udp --sport 5076 -j ACCEPT
 #-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 5064 -j LOG --log-prefix "INPUT: udp:d5064 "
 -A INPUT -i enx00249b6dcb8b -s 130.238.200.129/25 -p udp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b6dcb8b -s 130.238.200.129/25 -p udp --dport 5076 -j ACCEPT
 #-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p tcp --sport 5064 -j LOG --log-prefix "INPUT: tcp:s5064 "
 -A INPUT -i enx00249b6dcb8b -s 130.238.200.129/25 -p tcp --sport 5064 -j ACCEPT
+-A INPUT -i enx00249b6dcb8b -s 130.238.200.129/25 -p tcp --sport 5075 -j ACCEPT
+# For tests - allow all connections from 130.238.200.135
+-A INPUT -i enx00249b6dcb8b -s 130.238.200.135 -p tcp -j ACCEPT
 #-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p tcp --dport 5064 -j LOG --log-prefix "INPUT: tcp:d5064 "
 -A INPUT -i enx00249b6dcb8b -s 130.238.200.129/25 -p tcp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b6dcb8b -s 130.238.200.129/25 -p tcp --dport 5075 -j ACCEPT
 #-A INPUT -i enp0s20u3 -s 130.238.199.246 -p tcp --dport 5064 -j LOG --log-prefix "INPUT: tcp:d5064 "
 #-A INPUT -i enp0s20u3 -s 130.238.199.246 -p tcp --dport 5064 -j ACCEPT
 -A INPUT -i enx00249b6dcb8b -s 130.238.4.140 -p tcp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b6dcb8b -s 130.238.4.140 -p tcp --dport 5076 -j ACCEPT
 #-A INPUT -i enp0s20u3 -s 130.238.199.246 -p udp --dport 5064 -j LOG --log-prefix "INPUT: udp:d5064 "
 #-A INPUT -i enp0s20u3 -s 130.238.199.246 -p udp --dport 5064 -j ACCEPT
 -A INPUT -i enx00249b6dcb8b -s 130.238.4.140 -p udp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b6dcb8b -s 130.238.4.140 -p udp --dport 5076 -j ACCEPT
 #-A INPUT -i enp0s20u3 -p udp --dport 137 -j LOG --log-prefix "INPUT: udp:d137 REJECTED "
 #-A INPUT -i enp0s20u3 -p udp --dport 138 -j LOG --log-prefix "INPUT: udp:d138 REJECTED "
 #-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p tcp --sport 5065 -j ACCEPT

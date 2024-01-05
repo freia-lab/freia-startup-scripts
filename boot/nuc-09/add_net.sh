@@ -7,7 +7,8 @@ hostname >/tmp/hostname
 #Set address for dev $device
 echo "Setting address for $device"
 ip addr add 130.238.200.145/25 dev $device
-#ip link set $device up
+#ip link set dev $device up
+ip link set dev $device up
 echo "Setting up symmetric routing"
 ip route add 192.168.10.0/24 dev eno1 tab 1
 ip route add 130.238.200.128/25 dev $device tab 2
