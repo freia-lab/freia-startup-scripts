@@ -21,6 +21,6 @@ iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=$(TOP),IOCNAME=$(IOCNAME),IO
 # iocStats database
 dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=ioc27-htrctrl")
 
-# Start recsync client
-#iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=ioc27-htrctrl")
+# Load the recsync client's database
+iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=ioc27-htrctrl")
 
