@@ -5,7 +5,7 @@ EPICS_HOST_ARCH=linux-x86_64
 #EPICS_CA_ADDR_LIST=""
 TZ='Europe/Stockholm'
 EPICS_TZ='Europe/Stockholm'
-LOCATION=30008
+LOCATION='Anti cryostat rack'
 
 # E3 configuration
 E3_REQUIRE_NAME=require
@@ -22,4 +22,4 @@ E3_IOCSH=iocsh
 # Specific configuration
 IOCNAME=ioc24-hmp
 PROCSERV_PORT=3024
-EPICS_CAS_INTF_ADDR_LIST="192.168.10.128"
+EPICS_CAS_INTF_ADDR_LIST="192.168.10.132"
