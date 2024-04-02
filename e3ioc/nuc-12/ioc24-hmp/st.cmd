@@ -10,8 +10,8 @@ iocshLoad("$(hmp40x0_DIR)hmp4040.iocsh", "IP=192.168.10.45,P=CstatV-AC:,IOCNAME=
 
 
 # iocStats database
-#dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=ioc24-hmp")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=ioc24-hmp")
 
 # Start recsync client
-#iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=ioc24-hmp")
+iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=ioc24-hmp")
 
