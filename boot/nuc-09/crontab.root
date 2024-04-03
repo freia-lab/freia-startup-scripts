@@ -1,4 +1,3 @@
 CRON_TZ='Europe/Stockholm'
 01 * * * * /usr/local/bin/diskPercent.sh Ctrl-nuc09:disk-var:dskPercent
-05 3 * * * /usr/local/bin/rotateLogs.sh
-10 3 * * * /opt/startup/boot/nuc-09/logrotate.conf
+#05 3 * * * /usr/local/bin/rotateLogs.sh
