@@ -64,14 +64,23 @@ iocshLoad("$(superv_DIR)/computer-1p.iocsh","IP_ADDR=192.168.10.102,P=Ctrl-vsrv0
 # HOST_15 (freia-srv2)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.61,P=Ctrl-freiaSrv2,PART1=disk-root,CH1=6,PART2=disk-boot,CH2=34,PART3=disk-boot_efi,CH3=35")
 
-# HOST_15 (freia-arcapl2.physics.uu.se)
+# HOST_16 (freia-arcapl2.physics.uu.se)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=130.238.200.143,P=Ctrl-arcApl2,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
 
-# HOST_16 (phoebus-srv)
+# HOST_17 (phoebus-srv)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.90,P=Ctrl-phoebusSrv,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
 
-# HOST_17 (oldpc-04)
+# HOST_18 (oldpc-04)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.207,P=Ctrl-oldpc04,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
+
+# HOST_19 (freia-ub2.freia.local)
+iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.108,P=Ctrl-freiaUb2,PART1=disk-root,PART2=disk-boot")
+
+# HOST_20 (nuc-11)
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.130,P=Ctrl-nuc11,PART1=disk-root,PART2=disk-boot,PART3=disk-boot_efi")
+
+# HOST_21 (nuc-12)
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.132,P=Ctrl-nuc12,PART1=disk-root,PART2=disk-boot,PART3=disk-boot_efi")
 
 # Tomcat monitoring
 iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia-dbwr.physics.uu.se:8080,P=Ctrl-freiaDbwr:tomcat-,PDEV=dbwr")
