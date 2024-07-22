@@ -4,13 +4,14 @@ epicsEnvSet ("IOCNAME", "ioc10-rfleak")
 epicsEnvSet ("IOCDIR", "rfleakdet")
 
 require rfleakdet
+require afterinit
 require autosave
 require iocstats
 require recsync
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 iocshLoad("$(rfleakdet_DIR)/rfleakdet.iocsh", "ASYN_PORT_NAME=RFLEAKDET")
 
