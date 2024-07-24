@@ -12,7 +12,7 @@ require iocstats
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 iocshLoad("$(superv_DIR)/superv-common.iocsh")
 
