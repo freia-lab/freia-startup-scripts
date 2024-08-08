@@ -106,7 +106,7 @@ iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME =
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 # Start recsync client
 
