@@ -12,7 +12,7 @@ pydev("laser.debug=0")
 pydev("opa.debug=0")
 
 # iocStats database
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=ioc20-laser")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=ioc20-laser")
 
 # Start recsync client
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=ioc20-laser")
