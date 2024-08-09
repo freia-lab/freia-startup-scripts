@@ -2,7 +2,6 @@ require superv
 require recsync
 require iocstats
 require autosave
-require iocstats
 
 epicsEnvSet ("IOCNAME", "ioc03-service")
 # Directory name for the autosave files
@@ -83,7 +82,7 @@ iocshLoad("$(autosave_DIR)autosave.iocsh", "AS_TOP=/opt/epics/autosave,IOCNAME=$
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 # Start recsync client
 
