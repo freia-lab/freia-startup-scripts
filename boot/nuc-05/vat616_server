@@ -1,4 +1,4 @@
-. /opt/epics/py-hidapi/bin/activate
+. /opt/epics/py-hidapi-ubuntu22.04/bin/activate
 echo starting the server
-python  /opt/epics/py-hidapi/vat616_server.py
+python  /opt/epics/py-hidapi-ubuntu22.04/vat616_server.py
 

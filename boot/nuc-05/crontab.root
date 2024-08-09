@@ -1,2 +1,3 @@
-01 * * * * /home/root/diskPercent.sh Ctrl-nuc05:disk-var:dskPercent
-05 3 * * * /home/root/rotateLogs.sh
+CRON_TZ='Europe/Stockholm'
+01 * * * * /usr/local/bin/diskPercent.sh Ctrl-nuc05:disk-var:dskPercent
+05 3 * * * /usr/local/bin/rotateLogs.sh

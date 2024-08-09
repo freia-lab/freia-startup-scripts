@@ -1,6 +1,7 @@
 require vat616
 require recsync
 require iocstats
+require afterinit
 
 epicsEnvSet ("IOCNAME", "ioc01-vat616")
 
@@ -19,8 +20,9 @@ afterInit (dbpf CstatV-RHtr:CV583:sErrCode.SCAN "1 second")
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 # Start recsync client
 
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=$(IOCNAME)")
+

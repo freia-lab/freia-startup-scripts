@@ -1,4 +1,5 @@
 #!/bin/bash
+export TZ=Europe/Stockholm
 echo Stopping LDAP client daemon
 systemctl stop nslcd
 export host=`hostname`
