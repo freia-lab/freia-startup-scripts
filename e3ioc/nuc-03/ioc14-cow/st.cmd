@@ -5,7 +5,7 @@ require iocstats
 epicsEnvSet("IOCNAME", "ioc14-cow")
 
 # iocStats database
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 iocshLoad("$(cow_DIR)/cow.iocsh", "COW_PREFIX=CoW, COW_IP=192.168.1.70")
 

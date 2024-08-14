@@ -8,7 +8,7 @@ iocshLoad("$(maglps_DIR)/maglps.iocsh", "PLC_IP=192.168.1.65")
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 # Start recsync client
 

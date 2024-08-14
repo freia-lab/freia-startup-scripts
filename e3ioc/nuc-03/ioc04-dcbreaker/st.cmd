@@ -1,4 +1,4 @@
-require dcbreaker,1.1.0
+require dcbreaker
 require iocstats
  
 require recsync
@@ -7,7 +7,7 @@ epicsEnvSet ("IOCNAME", "ioc04-dcbreaker")
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
  
 iocshLoad("$(dcbreaker_DIR)/dcbreaker.iocsh", "ASYN_PORT_NAME=PORT1,DCBREAKER_IP=192.168.10.42,PREFIX=MAG-,DEV_NAME=EE-1:")
 iocshLoad("$(dcbreaker_DIR)/dcbreaker.iocsh", "ASYN_PORT_NAME=PORT2,DCBREAKER_IP=192.168.10.43,PREFIX=MAG-,DEV_NAME=EE-2:")

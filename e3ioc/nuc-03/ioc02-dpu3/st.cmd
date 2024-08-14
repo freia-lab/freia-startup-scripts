@@ -5,12 +5,13 @@ epicsEnvSet ("IOCNAME", "ioc02-dpu3")
 epicsEnvSet("TOP", "/opt/epics/autosave")
 epicsEnvSet("IOCDIR", "radmon-nessa")
 
-require autosave,5.10.2
+require autosave
+require afterinit
 require recsync
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
  
 iocshLoad("$(dpu3_DIR)/dpu3.iocsh", "ASYN_PORT_NAME=PORT1,DPU3_IP=192.168.20.102,DPU3_PREFIX=RadProt-Bunker2:")
 dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='PORT1',ADDR='0',IMAX='1024',OMAX='256'")
