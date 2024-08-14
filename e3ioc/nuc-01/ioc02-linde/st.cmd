@@ -1,6 +1,7 @@
 require linde
 require recsync
 require iocstats
+require afterinit
 
 epicsEnvSet ("IOCNAME", "ioc02-linde")
 
@@ -8,7 +9,7 @@ iocshLoad("$(linde_DIR)/linde.iocsh", "PLC_IP=192.168.1.10")
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 # Start recsync client
 

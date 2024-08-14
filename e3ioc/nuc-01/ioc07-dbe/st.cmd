@@ -9,7 +9,7 @@ iocshLoad("$(dbe_DIR)/dbe.iocsh", "PLC1_IP=192.168.1.248,PLC1_PORT=2000, PLC2_IP
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-ess.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
 
 # Start recsync client
 
