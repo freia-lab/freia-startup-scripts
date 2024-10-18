@@ -20,6 +20,6 @@ E3_REQUIRE_DBD=/epics/base-7.0.7/require/5.0.0/dbd
 E3_IOCSH=iocsh
 
 # Specific configuration
-IOCNAME=ioc28-arduinoplc
-PROCSERV_PORT=3028
+IOCNAME=ioc29-llrfmobile
+PROCSERV_PORT=3029
 EPICS_CAS_INTF_ADDR_LIST="192.168.10.128"
