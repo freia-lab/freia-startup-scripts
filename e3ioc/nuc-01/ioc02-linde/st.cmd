@@ -34,3 +34,19 @@ afterInit("dbpf", "Cryo-CBox:LN2:LI3685-PercOut.LSV", "MINOR")
 afterInit("dbpf", "Cryo-CBox:LN2:LI3685-PercOut.LLSV", "MAJOR")
 afterInit("dbpf", "Cryo-CBox:LN2:LI3685-PercOut.HYST", "2")
 
+# Return He purity
+afterInit("dbpf", "Cryo-Rec:LP:QI7210.HIHI", "1")
+afterInit("dbpf", "Cryo-Rec:LP:QI7210.HHSV, "MAJOR")
+afterInit("dbpf", "Cryo-Rec:LP:QI7220.HIHI", "1")
+afterInit("dbpf", "Cryo-Rec:LP:QI7220.HHSV, "MAJOR")
+afterInit("dbpf", "Cryo-Rec:LP:QI7230.HIHI", "1")
+afterInit("dbpf", "Cryo-Rec:LP:QI7230.HHSV, "MAJOR")
+afterInit("dbpf", "Cryo-Rec:LP:QI7240.HIHI", "1")
+afterInit("dbpf", "Cryo-Rec:LP:QI7240.HHSV, "MAJOR")
+afterInit("dbpf", "Cryo-Rec:LP:QI7250.HIHI", "1")
+afterInit("dbpf", "Cryo-Rec:LP:QI7250.HHSV, "MAJOR")
+
+# HP Storage
+afterInit("dbpf", "Cryo-CBox:Pur:PI3404.LOLO", "35")
+afterInit("dbpf", "Cryo-CBox:Pur:PI3404.LLSV", "MAJOR")
+
