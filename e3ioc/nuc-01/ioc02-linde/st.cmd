@@ -35,7 +35,7 @@ afterInit("dbpf", "Cryo-CBox:LN2:LI3685-PercOut.LLSV", "MAJOR")
 afterInit("dbpf", "Cryo-CBox:LN2:LI3685-PercOut.HYST", "2")
 
 # Return He purity
-afterInit("dbpf", "Cryo-Rec:LP:QI7210.HIHI", "1")
+afterInit("dbpf", "Cryo-Rec:LP:QI7210.HIHI", "3")
 afterInit("dbpf", "Cryo-Rec:LP:QI7210.HHSV, "MAJOR")
 afterInit("dbpf", "Cryo-Rec:LP:QI7220.HIHI", "1")
 afterInit("dbpf", "Cryo-Rec:LP:QI7220.HHSV, "MAJOR")
