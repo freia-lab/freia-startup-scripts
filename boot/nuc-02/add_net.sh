@@ -7,7 +7,7 @@ nmcli device show >/tmp/network_devices
 hostname >/tmp/hostname
 echo "Adding CAGWPUB connection"
 echo "Setting address for $device1"
-ip addr add 192.168.1.140/25 dev $device1
+ip addr add 130.238.200.140/25 dev $device1
 ip link set dev $device1 up
 #nmcli connection add type ethernet con-name CAGWPUB ifname enp0s20u3 ip4 130.238.200.140/25 gw4 130.238.200.129
 #echo "Setting up CAGWPUB connection"
