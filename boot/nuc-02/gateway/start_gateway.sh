@@ -1,17 +1,17 @@
 #!/bin/bash
 
 export host=`hostname`
-host_ip=`host $host | awk '{print $4}'`
+#host_ip=`host $host | awk '{print $4}'`
+host_ip=`ip a show eno1 | awk '/metric/ {print $2}' |awk -F / '{print $1}'`
 
 gwhome=/var/run/gateway
 uid=997
 gid=995
 
-export PATH=/opt/epics/bases/base-3.14.12.5/bin/centos7-x86_64:/opt/epics/modules/environment/1.6.0/3.14.12.5/bin/centos7-x86_64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
-export EPICS_HOST_ARCH=centos7-x86_64
-export EPICS_MODULES_PATH=/opt/epics/modules
-export EPICS_ENV_PATH=/opt/epics/modules/environment/1.6.0/3.14.12.5/bin/centos7-x86_64
-export EPICS_BASES_PATH=/opt/epics/bases
+export PATH=/epics/base-7.0.7/require/5.0.0/bin:/epics/base-7.0.7/bin/linux-x86_64:/usr/sbin:/usr/bin:/sbin:/bin
+export EPICS_HOST_ARCH=linux-x86_64
+export EPICS_BASE=/epics/base-7.0.7
+export LD_LIBRARY_PATH=/epics/base-7.0.7/lib/linux-x86_64
  
 start()
 {

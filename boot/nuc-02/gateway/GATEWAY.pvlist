@@ -1,6 +1,6 @@
 EVALUATION ORDER ALLOW, DENY 
  
-GW-nuc-02:.*		ALLOW 
+GW-nuc.*		ALLOW 
 CstatH.*	 	ALLOW  
 CstatV.*	 	ALLOW  
 CM.*			ALLOW	Freia

@@ -8,39 +8,39 @@
 -A INPUT -p icmp -j ACCEPT
 #-A INPUT -m state --state RELATED,ESTABLISHED -j LOG --log-prefix "INPUT: established "
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
-#-A INPUT -i enp0s20u3 -s 130.238.200.130 -p tcp --dport 22 -j LOG --log-prefix "INPUT: ssh ACCEPTED "
-#-A INPUT -i enp0s20u3 -s 130.238.200.130 -p tcp --dport 22 -j ACCEPT
-#-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --sport 5064 -j LOG --log-prefix "INPUT: udp:s5064 "
--A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --sport 5064 -j ACCEPT
-#-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 5064 -j LOG --log-prefix "INPUT: udp:d5064 "
--A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 5064 -j ACCEPT
-#-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p tcp --sport 5064 -j LOG --log-prefix "INPUT: tcp:s5064 "
--A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p tcp --sport 5064 -j ACCEPT
-#-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p tcp --dport 5064 -j LOG --log-prefix "INPUT: tcp:d5064 "
--A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p tcp --dport 5064 -j ACCEPT
-#-A INPUT -i enp0s20u3 -s 130.238.199.246 -p tcp --dport 5064 -j LOG --log-prefix "INPUT: tcp:d5064 "
-#-A INPUT -i enp0s20u3 -s 130.238.199.246 -p tcp --dport 5064 -j ACCEPT
--A INPUT -i enp0s20u3 -s 130.238.4.140 -p tcp --dport 5064 -j ACCEPT
-#-A INPUT -i enp0s20u3 -s 130.238.199.246 -p udp --dport 5064 -j LOG --log-prefix "INPUT: udp:d5064 "
-#-A INPUT -i enp0s20u3 -s 130.238.199.246 -p udp --dport 5064 -j ACCEPT
--A INPUT -i enp0s20u3 -s 130.238.4.140 -p udp --dport 5064 -j ACCEPT
-#-A INPUT -i enp0s20u3 -p udp --dport 137 -j LOG --log-prefix "INPUT: udp:d137 REJECTED "
-#-A INPUT -i enp0s20u3 -p udp --dport 138 -j LOG --log-prefix "INPUT: udp:d138 REJECTED "
-#-A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p tcp --sport 5065 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -s 130.238.200.130 -p tcp --dport 22 -j LOG --log-prefix "INPUT: ssh ACCEPTED "
+#-A INPUT -i enx00249b13a113 -s 130.238.200.130 -p tcp --dport 22 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --sport 5064 -j LOG --log-prefix "INPUT: udp:s5064 "
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --sport 5064 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --dport 5064 -j LOG --log-prefix "INPUT: udp:d5064 "
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --dport 5064 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p tcp --sport 5064 -j LOG --log-prefix "INPUT: tcp:s5064 "
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p tcp --sport 5064 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p tcp --dport 5064 -j LOG --log-prefix "INPUT: tcp:d5064 "
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p tcp --dport 5064 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -s 130.238.199.246 -p tcp --dport 5064 -j LOG --log-prefix "INPUT: tcp:d5064 "
+#-A INPUT -i enx00249b13a113 -s 130.238.199.246 -p tcp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b13a113 -s 130.238.4.140 -p tcp --dport 5064 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -s 130.238.199.246 -p udp --dport 5064 -j LOG --log-prefix "INPUT: udp:d5064 "
+#-A INPUT -i enx00249b13a113 -s 130.238.199.246 -p udp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b13a113 -s 130.238.4.140 -p udp --dport 5064 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -p udp --dport 137 -j LOG --log-prefix "INPUT: udp:d137 REJECTED "
+#-A INPUT -i enx00249b13a113 -p udp --dport 138 -j LOG --log-prefix "INPUT: udp:d138 REJECTED "
+#-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p tcp --sport 5065 -j ACCEPT
 # Allow CA (Epics) from UU VPN (130.238.188.1-130.238.191.255)
--A INPUT -i enp0s20u3 -s 130.238.188.0/22 -p tcp --dport 5064 -j ACCEPT
--A INPUT -i enp0s20u3 -s 130.238.188.0/22 -p udp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b13a113 -s 130.238.188.0/22 -p tcp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b13a113 -s 130.238.188.0/22 -p udp --dport 5064 -j ACCEPT
 # Allow CA (Epics) from freia-rds.physics.uu.se
--A INPUT -i enp0s20u3 -s 172.31.5.91 -p tcp --dport 5064 -j ACCEPT
--A INPUT -i enp0s20u3 -s 172.31.5.91 -p udp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b13a113 -s 172.31.5.91 -p tcp --dport 5064 -j ACCEPT
+-A INPUT -i enx00249b13a113 -s 172.31.5.91 -p udp --dport 5064 -j ACCEPT
 # Drop packets from Logitech device sending broadcasts all the time
--A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 54915 -j DROP
--A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 520 -j DROP
--A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp --dport 1947 -j DROP
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --dport 54915 -j DROP
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --dport 520 -j DROP
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --dport 1947 -j DROP
 # Drop all udp broadcast messages 
--A INPUT -i enp0s20u3 -s 130.238.200.129/25 -p udp -d 130.238.200.255/25 -j DROP
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp -d 130.238.200.255/25 -j DROP
 # Drop D-Link discovery protocol broadcast messages from llab-router 
--A INPUT -i enp0s20u3 -s 130.238.200.144 -p udp --dport 62976 -j DROP
--A INPUT -i enp0s20u3 -j LOG --log-prefix "==WARNING== INPUT REJECTED: "
+-A INPUT -i enx00249b13a113 -s 130.238.200.144 -p udp --dport 62976 -j DROP
+-A INPUT -i enx00249b13a113 -j LOG --log-prefix "==WARNING== INPUT REJECTED: "
 -A INPUT -j REJECT --reject-with icmp-host-prohibited
 COMMIT
