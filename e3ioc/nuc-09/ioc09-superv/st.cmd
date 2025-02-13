@@ -31,8 +31,8 @@ iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=130.238.200.137,P=Ctrl-arcA
 # HOST_4 (centos7-dm)
 iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.107,P=Ctrl-centos7DM,PART1=disk-root,PART2=disk-boot")
 
-# HOST_5 (freia-olog.physics.uu.se)
-iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=130.238.200.146,P=Ctrl-freiaOlog,PART1=disk-root,PART2=disk-boot")
+# HOST_5 (freia-ub3.physics.uu.se)
+iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.72,P=Ctrl-freiaUb3,PART1=disk-root,PART2=disk-boot")
 
 # HOST_6 (freia.physics.uu.se)
 iocshLoad("$(superv_DIR)/computer-1p.iocsh","IP_ADDR=130.238.4.140,P=Ctrl-freia,PART1=disk-root")
