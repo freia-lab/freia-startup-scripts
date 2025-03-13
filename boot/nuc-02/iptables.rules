@@ -8,6 +8,9 @@
 -A INPUT -p icmp -j ACCEPT
 #-A INPUT -m state --state RELATED,ESTABLISHED -j LOG --log-prefix "INPUT: established "
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --dport=5076 -j ACCEPT
+-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p tcp --dport=5075 -j ACCEPT
+#-A INPUT -i enx00249b13a113 -s 130.238.200.192 -j ACCEPT
 #-A INPUT -i enx00249b13a113 -s 130.238.200.130 -p tcp --dport 22 -j LOG --log-prefix "INPUT: ssh ACCEPTED "
 #-A INPUT -i enx00249b13a113 -s 130.238.200.130 -p tcp --dport 22 -j ACCEPT
 #-A INPUT -i enx00249b13a113 -s 130.238.200.129/25 -p udp --sport 5064 -j LOG --log-prefix "INPUT: udp:s5064 "
