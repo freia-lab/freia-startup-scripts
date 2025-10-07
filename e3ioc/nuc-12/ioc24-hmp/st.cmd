@@ -6,7 +6,8 @@ require iocstats
 ected)
 var streamErrorDeadTime 60
 
-iocshLoad("$(hmp40x0_DIR)hmp4040.iocsh", "IP=192.168.10.45,P=CstatV-AC:,IOCNAME=ioc24-hmp")
+#iocshLoad("$(hmp40x0_DIR)hmp4040.iocsh", "IP=192.168.10.45,P=CstatV-AC:,IOCNAME=ioc24-hmp")
+iocshLoad("$(hmp40x0_DIR)hmp4040x2.iocsh", "IP1=192.168.10.50,P1=CstatV-AC1:,IP2=192.168.10.45,P2=CstatV-AC:,IOCNAME=ioc24-hmp")
 
 
 # iocStats database
