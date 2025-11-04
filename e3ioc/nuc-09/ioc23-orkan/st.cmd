@@ -2,6 +2,7 @@ require orkan
 
 require recsync
 require iocstats
+require afterinit
 
 
 epicsEnvSet("IOCNAME", "ioc23-orkan")
@@ -15,6 +16,10 @@ epicsEnvSet("TOP", "/opt/epics/autosave")
 
 # Connect using Modbus TCP (Orkan and Hurricane)
 iocshLoad ("$(orkan_DIR)two-compressors-tcp.iocsh", "ASYN_PORT_NAME1=PORT1,IP_ADDR1=192.168.10.39,PREFIX1=Cryo-Rec:LP:,DEV_NAME1=C4:,ASYN_PORT_NAME2=PORT2,IP_ADDR2=192.168.10.54,PREFIX2=Cryo-Rec:LP:,DEV_NAME2=C1:,TOP=/opt/epics/autosave")
+
+# Modify the alarm status for C1 - Cryo-Rec:LP:C1:sAlarm-raw will be set only if C4 and C1 will not be able to cope with eptying the gas bag.
+afterInit (dbpf Cryo-Rec:LP:C1:sAlarm-raw.INPC "Cryo-Rec:LP:C4:sAlarm NPP NMS")
+afterInit "dbpf Cryo-Rec:LP:C1:sAlarm-raw.CALC \(C=1\)&&\(A=1\)?\(\(B#9\)&&\(B#13\)\):0"
 
 var(reccastTimeout, 5.0)
 var(reccastMaxHoldoff, 5.0)
