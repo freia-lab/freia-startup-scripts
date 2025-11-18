@@ -15,7 +15,10 @@ iocshLoad("$(rexroth_DIR)rexroth.iocsh", "IP=localhost,P=CstatV-AC:,IP_PORT=2195
 #iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=$(TOP),IOCNAME=$(IOCNAME),IOCDIR=$(IOCDIR=rexroth)")
 
 # iocStats database
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=${IOCNAME}")
+#dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=${IOCNAME}")
+iocshLoad("$(iocstats_DIR)iocStats-host.iocsh","HOSTNAME=ioc26-rexroth")
+iocshLoad("$(iocstats_DIR)iocStats-ioc.iocsh")
+
 
 # Load the recsync client's database
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=${IOCNAME}")
