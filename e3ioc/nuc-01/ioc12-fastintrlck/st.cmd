@@ -1,6 +1,8 @@
 require fastintrlck
 require recsync
 require iocstats
+require linstat
+
 
 epicsEnvSet("IOCNAME", "ioc12-fastintrlck")
 
@@ -19,7 +21,8 @@ dbLoadRecords("seq-freia-cRIO-ADC.db","P=IntlkF-cRio1, INDX=14, NAME=IntlkF-cRio
 dbLoadRecords("seq-freia-cRIO-ADC.db","P=IntlkF-cRio1, INDX=15, NAME=IntlkF-cRio1:ADC-15:sRdV")
 
 # iocStats database
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 # Start recsync client
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=$(IOCNAME)")
