@@ -20,7 +20,7 @@ E3_REQUIRE_DBD=/epics/base-7.0.7/require/5.0.0/dbd
 E3_IOCSH=iocsh
 
 # Specific configuration
-IOCNAME=ioc03-hnoss
-PROCSERV_PORT=3003
+IOCNAME=ioc99-nuc01
+PROCSERV_PORT=3099
 EPICS_CAS_INTF_ADDR_LIST="192.168.10.115"
 ENGINEER=KG
