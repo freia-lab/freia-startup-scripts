@@ -9,10 +9,12 @@ require superv
 require autosave
 require recsync
 require iocstats
+require linstat
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 iocshLoad("$(superv_DIR)/superv-common.iocsh")
 

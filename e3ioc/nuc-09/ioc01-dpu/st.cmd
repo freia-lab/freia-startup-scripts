@@ -1,5 +1,6 @@
 require dpu,1.1.1
 require iocstats
+require linstat
 
 epicsEnvSet ("IOCNAME", "ioc01-dpu")
 epicsEnvSet("TOP", "/opt/epics/autosave")
@@ -11,8 +12,9 @@ require recsync
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
- 
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
+
 iocshLoad("$(dpu_DIR)/dpu.iocsh", "ASYN_PORT_NAME=PORT1, DPU_IP='192.168.10.5', DPU_PORT=4001,DPU_PREFIX=RadProt-")
 
 #Load your database defining the EPICS records

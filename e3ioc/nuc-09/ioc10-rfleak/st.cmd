@@ -8,10 +8,12 @@ require afterinit
 require autosave
 require iocstats
 require recsync
+require linstat
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 iocshLoad("$(rfleakdet_DIR)/rfleakdet.iocsh", "ASYN_PORT_NAME=RFLEAKDET")
 

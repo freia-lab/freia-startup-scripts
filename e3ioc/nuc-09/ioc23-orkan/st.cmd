@@ -3,7 +3,7 @@ require orkan
 require recsync
 require iocstats
 require afterinit
-
+require linstat
 
 epicsEnvSet("IOCNAME", "ioc23-orkan")
 epicsEnvSet("TOP", "/opt/epics/autosave")
@@ -25,7 +25,8 @@ var(reccastTimeout, 5.0)
 var(reccastMaxHoldoff, 5.0)
 
 # iocStats database
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=${IOCNAME}")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=${IOCNAME}")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 # Load the recsync client's database
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=${IOCNAME}")
