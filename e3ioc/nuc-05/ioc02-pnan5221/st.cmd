@@ -1,6 +1,7 @@
 require pnan5221
 require recsync
 require iocstats
+require linstat
 
 epicsEnvSet ("IOCNAME", "ioc02-pnan5221")
 
@@ -18,7 +19,8 @@ iocshLoad("$(pnan5221_DIR)scan-mtr.iocsh")
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 # Start recsync client
 

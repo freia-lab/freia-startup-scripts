@@ -2,6 +2,7 @@ require vat616
 require recsync
 require iocstats
 require afterinit
+require linstat
 
 epicsEnvSet ("IOCNAME", "ioc01-vat616")
 
@@ -20,7 +21,8 @@ afterInit (dbpf CstatV-RHtr:CV583:sErrCode.SCAN "1 second")
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 # Start recsync client
 
