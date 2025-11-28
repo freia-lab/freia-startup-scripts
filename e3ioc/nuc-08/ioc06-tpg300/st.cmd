@@ -1,6 +1,7 @@
 require tpg300
 require recsync
 require iocstats
+require linstat
 
 epicsEnvSet ("IOCNAME", "ioc06-tpg300")
 
@@ -106,7 +107,8 @@ iocshLoad(${tpg300_DIR}/_vac_gauge_tpg300_vgc_1_relay_freia.iocsh, "DEVICENAME =
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 # Start recsync client
 
