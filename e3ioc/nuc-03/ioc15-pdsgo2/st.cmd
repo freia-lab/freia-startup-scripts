@@ -2,6 +2,7 @@ require pdsgo2
 require recsync
 require iocstats
 require afterinit
+require linstat
 
 epicsEnvSet("IOCNAME", "ioc15-pdsgo2")
 epicsEnvSet("TOP", "/opt/epics/autosave")
@@ -10,7 +11,8 @@ epicsEnvSet("IOCDIR", "pdsgo2")
 require autosave
 
 # iocStats database
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 # Limit the error messages form the StreamDevice (specially when the device is not connected)
 var streamErrorDeadTime 60

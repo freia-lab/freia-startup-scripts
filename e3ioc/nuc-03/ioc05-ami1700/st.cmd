@@ -2,14 +2,16 @@
 require ami1700
 require recsync
 require iocstats
+require linstat
 
 epicsEnvSet ("IOCNAME", "ioc05-ami1700")
 epicsEnvSet ("STREAM_PROTOCOL_PATH", ".:$(ami1700_DIR)/db")
 
 # iocStats database
 
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=$(IOCNAME)")
- 
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
+
 iocshLoad("$(ami1700_DIR)/ami1700.iocsh", "ASYN_PORT_NAME=AMI_600,AMI_IP=192.168.1.32,DEV_NAME=LT600,PREFIX=CstatV-Ctrl:")
 iocshLoad("$(ami1700_DIR)/ami1700.iocsh", "ASYN_PORT_NAME=AMI_670,AMI_IP=192.168.1.33,DEV_NAME=LT670,PREFIX=CstatV-Ctrl:")
 iocshLoad("$(ami1700_DIR)/ami1700.iocsh", "ASYN_PORT_NAME=AMI_671,AMI_IP=192.168.1.34,DEV_NAME=LT671,PREFIX=CstatV-Ctrl:")
