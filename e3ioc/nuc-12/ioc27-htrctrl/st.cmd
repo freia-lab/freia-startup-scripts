@@ -1,4 +1,4 @@
-require heaterctrl,0.4.2+0
+require heaterctrl
 
 require recsync
 require iocstats
