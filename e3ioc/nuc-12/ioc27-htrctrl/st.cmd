@@ -2,6 +2,7 @@ require heaterctrl,0.4.2+0
 
 require recsync
 require iocstats
+require linstat
 
 addScan(60)
 addScan(30)
@@ -27,7 +28,8 @@ dbLoadRecords("heaterctrl-aliases.db", "P=$(P), PSU1=$(P_HMP1), PSU2=$(P_HMP2), 
 iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=$(TOP),IOCNAME=$(IOCNAME),IOCDIR=$(IOCDIR=daq6510)")
 
 # iocStats database
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia.db","IOC=ioc27-htrctrl")
+dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=ioc27-htrctrl")
+dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 # Load the recsync client's database
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=ioc27-htrctrl")
