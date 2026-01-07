@@ -76,7 +76,7 @@ iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.90,P=Ctrl-phoebu
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.207,P=Ctrl-oldpc04,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
 
 # HOST_19 (freia-ub2.freia.local)
-iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.108,P=Ctrl-freiaUb2,PART1=disk-root,PART2=disk-boot")
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.108,P=Ctrl-freiaUb2,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
 
 # HOST_20 (nuc-11)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.130,P=Ctrl-nuc11,PART1=disk-root,PART2=disk-boot,PART3=disk-boot_efi")
