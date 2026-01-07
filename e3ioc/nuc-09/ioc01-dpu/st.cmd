@@ -7,7 +7,6 @@ epicsEnvSet("TOP", "/opt/epics/autosave")
 epicsEnvSet("IOCDIR", "radmon-freia")
 
 require afterinit,1.2.1 
-require autosave,5.10.2
 require recsync
 
 # iocStats database
