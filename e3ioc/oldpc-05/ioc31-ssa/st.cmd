@@ -9,8 +9,6 @@ require linstat
 epicsEnvSet("IOCNAME", "ioc31-ssa")
 epicsEnvSet("TOP", "/opt/epics/autosave")
 
-
-#iocshLoad("$(myrrha_ssa_DIR)ssa.iocsh", "IP=localhost,P=CstatV-AC:,IP_PORT=2195,IOCNAME=ioc26-rexroth")
 epicsEnvSet(IOC_NUM, "1")
 epicsEnvSet(CAB_NUM, "190")
 epicsEnvSet(IOC_CAB_NUM, "100")
@@ -31,19 +29,19 @@ iocshLoad("$(myrrha_ssa_DIR)cab.iocsh", "SLAVE_ID=0")
 
 epicsEnvSet(PREFIX_AMP, "$(CAB_SSA):$(DISCIPLINE)-Amp")
 iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=A,NUM_SSM=4,AMP_SSM='1\\\,3\\\,5\\\,7'")
-iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=B,NUM_SSM=4,AMP_SSM='2\\\,4\\\,6\\\,8'")
+#iocshLoad("$(myrrha_ssa_DIR)amp.iocsh", "AMP_CHAR=B,NUM_SSM=4,AMP_SSM='2\\\,4\\\,6\\\,8'")
 
 epicsEnvSet(PREFIX_PSU, "$(CAB_SSA):$(DISCIPLINE)-PSU")
-iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=1")
-#iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=2")
-#iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=3")
-#iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=4")
-#iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=5")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=1,CALC_INP=A")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=2,CALC_INP=B")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=3,CALC_INP=C")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=4,CALC_INP=D")
+iocshLoad("$(myrrha_ssa_DIR)psu.iocsh", "PSU_NUM=5,CALC_INP=E")
 
 epicsEnvSet(PREFIX_SSM, "$(CAB_SSA):$(DISCIPLINE)-SSM")
 epicsEnvSet(IP_ADDR_BASE, "10.100")
 epicsEnvSet(POLL_MS, "1000")
-iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=1")
+iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=1,SSM_ADDR=10.100.190.1")
 #iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=2")
 #iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=3")
 #iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=4")
@@ -54,8 +52,8 @@ iocshLoad("$(myrrha_ssa_DIR)ssm.iocsh", "SSM_NUM=1")
 
 
 # iocStats database
-dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=${IOCNAME}")
-dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
+#dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=${IOCNAME}")
+#dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
 # Load the recsync client's database
 #iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=${IOCNAME}")
