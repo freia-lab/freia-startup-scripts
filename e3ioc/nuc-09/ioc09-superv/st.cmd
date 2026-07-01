@@ -28,7 +28,7 @@ iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.60,P=Ctrl-freiaS
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.62,P=Ctrl-centosSrv1,PART1=disk-root,PART2=disk-boot,PART3=disk-data1")
 
 # HOST_3 (freia-arcapl1)
-iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=130.238.200.137,P=Ctrl-arcApl1,PART1=disk-root,PART2=disk-boot,PART3=disk-data1")
+#iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=130.238.200.137,P=Ctrl-arcApl1,PART1=disk-root,PART2=disk-boot,PART3=disk-data1")
 
 # HOST_4 (centos7-dm)
 iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.107,P=Ctrl-centos7DM,PART1=disk-root,PART2=disk-boot")
@@ -103,7 +103,7 @@ iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia-arcapl3.physic
 iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia-arcapl3.physics.uu.se:17668,P=Ctrl-arcApl3:retrieval-,PDEV=retrieval3")
 
 # Archiver Appliance monitoring
-iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl1.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl1:aa-metrics:,PDEV=aa1mon")
+#iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl1.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl1:aa-metrics:,PDEV=aa1mon")
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl2.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl2:aa-metrics:,PDEV=aa2mon")
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl3.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl3:aa-metrics:,PDEV=aa3mon")
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://oldpc-01.freia.local:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-oldpc01:aa-metrics:,PDEV=aaoldpcmon")
