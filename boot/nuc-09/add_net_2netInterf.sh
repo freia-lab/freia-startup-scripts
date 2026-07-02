@@ -1,6 +1,6 @@
 #!/bin/bash
 device=enx00249b6dcb8b
-host=`hostname`
+host=`hostname -s`
 ip link  >/tmp/network_devices
 hostname >/tmp/hostname
 #not needed: ip link add $device type ethernet

@@ -1,6 +1,6 @@
 #!/bin/bash
 device=enx0c0e768ff587
-host=`hostname`
+host=`hostname -s`
 ip link  >/tmp/network_devices
 hostname >/tmp/hostname
 echo "Setting address for $device"

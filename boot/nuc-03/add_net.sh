@@ -1,7 +1,7 @@
 #!/bin/bash
 device1=enx00249b488e29
 device2=enx00249b488e2a
-host=`hostname`
+host=`hostname -s`
 echo "Stopping LDAP client daemon"
 systemctl stop nslcd
 nmcli device show >/tmp/network_devices

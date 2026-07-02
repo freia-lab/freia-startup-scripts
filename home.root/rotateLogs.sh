@@ -1,5 +1,5 @@
 #!/bin/bash
-h=`hostname`
+h=`hostname -s`
 cd /var/run/procServ
 for f in *; do
     if [ -d ${f} ]; then

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export host=`hostname`
+export host=`hostname -s`
 #host_ip=`host $host | awk '{print $4}'`
 host_ip=`ip a show eno1 | awk '/metric/ {print $2}' |awk -F / '{print $1}'`
 

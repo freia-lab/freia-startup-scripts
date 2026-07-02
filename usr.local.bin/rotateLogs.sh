@@ -1,5 +1,5 @@
 #!/bin/bash
-h=`hostname`
+h=`hostname -s`
 if [ -d /var/run/procServ ]; then
 	cd /var/run/procServ
 	for ioc in *; do

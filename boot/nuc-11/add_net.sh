@@ -1,5 +1,5 @@
 #!/bin/bash
-host=`hostname`
+host=`hostname -s`
 echo "Stopping LDAP client daemon"
 systemctl stop nslcd
 nmcli device show >/tmp/network_devices
