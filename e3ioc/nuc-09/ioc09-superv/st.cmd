@@ -43,7 +43,7 @@ iocshLoad("$(superv_DIR)/computer-1p.iocsh","IP_ADDR=130.238.4.140,P=Ctrl-freia,
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.70,P=Ctrl-centosSrv2,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
 
 # HOST_8 (nuc-04)
-iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.118,P=Ctrl-nuc04,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
+iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.118,P=Ctrl-nuc04,PART1=disk-root,PART2=disk-boot")
 
 # HOST_9 (freia-cons2)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.114,P=Ctrl-freiaCons2,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
@@ -73,7 +73,7 @@ iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=130.238.200.143,P=Ctrl-arcA
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.90,P=Ctrl-phoebusSrv,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
 
 # HOST_18 (oldpc-04)
-iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.207,P=Ctrl-oldpc04,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
+iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.207,P=Ctrl-oldpc04,PART1=disk-root,PART2=disk-boot")
 
 # HOST_19 (freia-ub2.freia.local)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.108,P=Ctrl-freiaUb2,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
@@ -106,7 +106,7 @@ iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia-arcapl3.physic
 #iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl1.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl1:aa-metrics:,PDEV=aa1mon")
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl2.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl2:aa-metrics:,PDEV=aa2mon")
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl3.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl3:aa-metrics:,PDEV=aa3mon")
-iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://oldpc-01.freia.local:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-oldpc01:aa-metrics:,PDEV=aaoldpcmon")
+iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://oldpc-01.freia.internal.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-oldpc01:aa-metrics:,PDEV=aaoldpcmon")
 
 iocshLoad("$(autosave_DIR)/autosave.iocsh", "AS_TOP=/opt/epics/autosave,IOCNAME=$(IOCNAME)")
 iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=$(IOCNAME)")
