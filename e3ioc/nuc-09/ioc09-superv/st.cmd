@@ -52,7 +52,7 @@ iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.114,P=Ctrl-freia
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.126,P=Ctrl-nuc07,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
 
 # HOST_11 (oldpc-01)
-iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.204,P=Ctrl-oldpc01,PART1=disk-root,PART2=disk-boot,PART3=disk-home")
+iocshLoad("$(superv_DIR)/computer-2p.iocsh","IP_ADDR=192.168.10.204,P=Ctrl-oldpc01,PART1=disk-root,PART2=disk-boot")
 
 # HOST_12 (oldpc-02)
 iocshLoad("$(superv_DIR)/computer-1p.iocsh","IP_ADDR=192.168.10.205,P=Ctrl-oldpc02,PART1=disk-root")
