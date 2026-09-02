@@ -93,6 +93,9 @@ iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=130.238.200.147,P=Ctrl-arcA
 # HOST_24 (ubuntu-srv1)
 iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.64,P=Ctrl-ubuntuSrv1,PART1=disk-root,PART2=disk-boot,PART3=disk-data1")
 
+# HOST_25 (nuc-13)
+iocshLoad("$(superv_DIR)/computer-3p.iocsh","IP_ADDR=192.168.10.111,P=Ctrl-nuc13,PART1=disk-root,PART2=disk-boot,PART3=disk-boot_efi")
+
 # Tomcat monitoring
 iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia-dbwr.physics.uu.se:8080,P=Ctrl-freiaDbwr:tomcat-,PDEV=dbwr")
 iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia.physics.uu.se:8080,P=Ctrl-freia:tomcat-,PDEV=freia")
