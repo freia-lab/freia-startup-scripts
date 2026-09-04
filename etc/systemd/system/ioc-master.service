@@ -1,0 +1,15 @@
+[Unit]
+Description=Modified IOC Starter
+After=freia-boot.service
+#RequiresMountsFor=/epics
+#RequiresMountsFor=/opt/startup
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 10
+#ExecStart=/bin/bash -c 'shopt -s nullglob; for i in /opt/startup/e3ioc/%H/*; do /bin/systemctl start e3ioc@$${i##*/}.service; done'
+#ExecStart=/usr/bin/env bash -c 'shopt -s nullglob; for i in /opt/startup/e3ioc/%H/*; do /bin/systemctl start e3ioc@$${i##*/}.service; done'
+ExecStart=/usr/bin/env bash -c 'shopt -s nullglob; for i in /opt/startup/e3ioc/%l/*; do /bin/systemctl start e3ioc@$${i##*/}.service; done'
