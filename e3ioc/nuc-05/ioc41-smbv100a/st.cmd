@@ -5,6 +5,7 @@ require asyn
 require stream
 require linstat
 require iocstats
+require recsync
 
 epicsEnvSet ("IOCNAME", "ioc41-smbv100a")
 
@@ -19,3 +20,8 @@ epicsEnvSet("STREAM_PROTOCOL_PATH","$(smbv100a_DB)")
 dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
 dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 dbLoadRecords("smbv100a.db", "PORT=PORT1,P=LLRF-VSGEN,DEV=SMBV100A")
+
+# Start recsync client
+
+iocshLoad("$(recsync_DIR)/recsync.iocsh", "IOCNAME=$(IOCNAME)")
+
