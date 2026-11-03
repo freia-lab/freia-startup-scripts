@@ -1,4 +1,4 @@
-require dpu,1.1.1
+require dpu,1.2.0
 require iocstats
 require linstat
 

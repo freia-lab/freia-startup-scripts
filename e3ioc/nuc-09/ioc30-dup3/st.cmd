@@ -15,7 +15,7 @@ require recsync
 dbLoadRecords("$(iocstats_DB)/iocAdminSoft-freia-proc-limited.db","IOC=$(IOCNAME)")
 dbLoadRecords("$(linstat_DB)linStatProc.db" ,"IOC=$(IOCNAME)")
 
-iocshLoad("$(dpu3_DIR)/dpu3.iocsh", 'ASYN_PORT_NAME=PORT1,DPU3_IP=192.168.10.52,DPU3_PREFIX=RadProt-Aux:,DET1=GD-00,DET2=GD-01,DET3=GD-02,DET4=GD-03,PROT_VER=v2,SCAN_PERIOD="1 second"')
+iocshLoad("$(dpu3_DIR)/dpu3.iocsh", 'ASYN_PORT_NAME=PORT1,DPU3_IP=192.168.10.52,DPU3_PREFIX=RadProt-Aux:,DET1=GD-00,DET2=GD-01,DET3=GD-02,DET4=GD-03,PROT_VER=v2,SCAN_PERIOD="1 second",AREA_CLEARED_STAT=RadProt-Bunker1:Clearing:sState')
 dbLoadRecords("asynRecord.db","P=$(IOCNAME),R=:asynRec,PORT='PORT1',ADDR='0',IMAX='1024',OMAX='256'")
  
 asynSetTraceIOMask "PORT1",0,4   # Enable traceIOHex
