@@ -114,7 +114,7 @@ iocshLoad("$(superv_DIR)/tomcat-mon.iocsh", "IP_ADDR=http://freia-arcapl3.physic
 
 # Archiver Appliance monitoring
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl1.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl1:aa-metrics:,PDEV=aa1mon")
-#iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl2.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl2:aa-metrics:,PDEV=aa2mon")
+iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl2.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl2:aa-metrics:,PDEV=aa2mon")
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://130.238.200.145:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl2:aa-metrics:,PDEV=aa2mon")
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://freia-arcapl3.physics.uu.se:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-arcApl3:aa-metrics:,PDEV=aa3mon")
 iocshLoad("$(superv_DIR)/aa-metrics.iocsh", "IP_ADDR=http://192.168.10.207:17665/mgmt/bpl/getApplianceMetrics,P=Ctrl-oldpc04:aa-metrics:,PDEV=aaoldpcmon")
